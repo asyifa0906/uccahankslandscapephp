@@ -48,7 +48,6 @@ video {
     right: 0;
     height: 143px;
     background: rgba(253, 252, 247, 0.98);
-    border-top: 3px solid #294e42;
     border-bottom: 1px solid #e4e6e1;
     z-index: 1000;
     transition: 0.3s ease;

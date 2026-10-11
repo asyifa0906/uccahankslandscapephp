@@ -1,0 +1,1563 @@
+/* ==================================================
+   GOOGLE FONT
+================================================== */
+
+@import url(
+    'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap'
+);
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   BODY
+================================================== */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f7f8f4;
+    color: #26332c;
+}
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 28px 17px;
+    background: #20563f;
+    color: #ffffff;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.admin-logo {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0;
+    padding: 0 12px;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 0.95;
+}
+
+.admin-logo:hover,
+.admin-logo:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.admin-logo span {
+    display: block;
+    color: #ffffff;
+    font-size: 31px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.admin-logo strong {
+    display: block;
+    margin-top: 6px;
+    color: #69b83f;
+    font-size: 31px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+/* ==================================================
+   MENU TITLE
+================================================== */
+
+.admin-menu-title {
+    margin-top: 50px;
+    margin-bottom: 12px;
+    padding-left: 12px;
+    color: rgba(255,255,255,0.68);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   MENU
+================================================== */
+
+.admin-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ==================================================
+   MENU UTAMA
+   JASA
+   PRODUK
+   KONSULTASI
+================================================== */
+
+.menu-link {
+    width: 100%;
+    height: 57px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 14px;
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* ==================================================
+   MENU HOVER
+================================================== */
+
+.menu-link:hover {
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ==================================================
+   MENU AKTIF
+================================================== */
+
+.menu-link.active {
+    background: #67967c;
+    color: #ffffff;
+}
+
+.menu-link.active:hover {
+    background: #67967c;
+    color: #ffffff;
+}
+
+/* ==================================================
+   GROUP PRODUK
+================================================== */
+
+.menu-product-group {
+    width: 100%;
+}
+
+/* ==================================================
+   PRODUK TOGGLE
+================================================== */
+
+.menu-product-toggle {
+    justify-content: space-between;
+}
+
+/* ==================================================
+   PANAH
+================================================== */
+
+.menu-arrow {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* ==================================================
+   SUBMENU
+================================================== */
+
+.menu-submenu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 5px;
+    padding-left: 23px;
+}
+
+.menu-submenu.show {
+    display: flex;
+}
+
+/* ==================================================
+   SUBMENU ITEM
+================================================== */
+
+.submenu-link {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: transparent;
+    color: rgba(255,255,255,0.76);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.submenu-link:hover {
+    background: rgba(255,255,255,0.07);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.submenu-link.active {
+    background: rgba(255,255,255,0.10);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.admin-content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    margin-left: 250px;
+    padding: 40px 32px;
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.admin-card {
+    width: 100%;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e2e9e3;
+    border-radius: 22px;
+    box-shadow:
+        0 8px 28px rgba(33,79,59,0.06);
+}
+
+/* ==================================================
+   CARD HEADER
+================================================== */
+
+.admin-card-header {
+    width: 100%;
+    min-height: 46px;
+    margin-bottom: 26px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #edf1ed;
+}
+
+.admin-card-header h1 {
+    margin: 0;
+    color: #214f3b;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+/* ==================================================
+   TABEL WRAPPER
+================================================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e3e9e4;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+/* ==================================================
+   TABEL
+================================================== */
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+/* HEADER TABEL */
+
+.admin-table thead {
+    background: #f1f5f1;
+}
+
+.admin-table th {
+    padding: 15px 16px;
+    color: #44554b;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid #dfe7e1;
+}
+
+/* DATA */
+
+.admin-table td {
+    padding: 16px;
+    color: #5e6a63;
+    font-size: 13px;
+    line-height: 1.6;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+    background: #fafcfb;
+}
+
+/* NAMA */
+
+.admin-table td strong {
+    color: #214f3b;
+    font-weight: 700;
+}
+
+/* ==================================================
+   BADGE
+================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #e7f1e9;
+    color: #3f7659;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.admin-table img {
+    width: 70px;
+    height: 50px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==================================================
+   TABLE ACTION
+================================================== */
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-edit,
+.btn-delete {
+    min-height: 34px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* EDIT */
+
+.btn-edit {
+    background: #e6f0e8;
+    color: #356b4e;
+}
+
+.btn-edit:hover {
+    background: #d7e7dc;
+    color: #356b4e;
+}
+
+/* HAPUS */
+
+.btn-delete {
+    background: #faeaea;
+    color: #b24a4a;
+}
+
+.btn-delete:hover {
+    background: #f3d7d7;
+    color: #b24a4a;
+}
+
+/* ==================================================
+   BUTTON UTAMA
+================================================== */
+
+.btn {
+    min-height: 42px;
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* PRIMARY */
+
+.btn-primary {
+    background: #214f3b;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #183d2d;
+    color: #ffffff;
+}
+
+/* SECONDARY */
+
+.btn-secondary {
+    min-height: 42px;
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eef2ef;
+    color: #214f3b;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #e2e9e3;
+    color: #214f3b;
+    text-decoration: none;
+}
+
+/* ==================================================
+   FORM PAGE
+================================================== */
+
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-page .form-card {
+    width: 620px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* ==================================================
+   FORM HEADER
+================================================== */
+
+.form-page .admin-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+}
+
+.form-page .admin-card-header h1 {
+    width: 100%;
+    margin: 0;
+    color: #214f3b;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    text-align: center;
+}
+
+/* ==================================================
+   FORM
+================================================== */
+
+.form-page .admin-form {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ==================================================
+   FORM GROUP
+================================================== */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #35443b;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* INPUT */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #dce5df;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #2c3931;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 44px;
+    padding: 0 14px;
+}
+
+.form-group textarea {
+    min-height: 105px;
+    padding: 12px 14px;
+    resize: vertical;
+}
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #67967c;
+    box-shadow:
+        0 0 0 3px rgba(103,150,124,0.12);
+}
+
+/* ==================================================
+   FORM ACTION
+================================================== */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+/* ==================================================
+   ERROR
+================================================== */
+
+.alert-error {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    border: 1px solid #efcccc;
+    border-radius: 10px;
+    background: #fff3f3;
+    color: #b44848;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+.empty-state {
+    padding: 40px 20px !important;
+    text-align: center;
+    color: #7b877f !important;
+}
+
+/* ==================================================
+   DASHBOARD
+================================================== */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.admin-stat-card {
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e9e3;
+    border-radius: 18px;
+    box-shadow:
+        0 6px 20px rgba(33,79,59,0.05);
+}
+
+.admin-stat-card span {
+    display: block;
+    margin-bottom: 8px;
+    color: #778279;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-stat-card strong {
+    color: #214f3b;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.admin-footer {
+    margin-top: 25px;
+    padding: 18px 4px;
+    color: #7b867f;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+    .admin-sidebar {
+        width: 220px;
+    }
+    .admin-content {
+        width: calc(100% - 220px);
+        margin-left: 220px;
+        padding: 30px 22px;
+    }
+    .admin-logo span,
+    .admin-logo strong {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 24px 16px;
+    }
+    .admin-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 24px 16px;
+    }
+    .admin-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-page .admin-card-header {
+        align-items: center;
+    }
+    .form-page .form-card {
+        width: 100%;
+        padding: 22px;
+    }
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-logo span,
+    .admin-logo strong {
+        font-size: 25px;
+    }
+    .menu-link {
+        height: 52px;
+        font-size: 15px;
+    }
+    .admin-card {
+        padding: 20px;
+        border-radius: 17px;
+    }
+    .form-page .admin-card-header h1 {
+        font-size: 25px;
+    }
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+    .form-actions .btn,
+    .form-actions .btn-secondary {
+        width: 100%;
+    }
+}
+/* =========================================================
+   PRODUK KAMI
+   ========================================================= */
+
+.produk-page {
+    background: #f7f8f4;
+    min-height: 100vh;
+    padding-bottom: 90px;
+}
+
+/* =========================================================
+   HEADER PRODUK
+   ========================================================= */
+
+.produk-header {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 70px 40px 35px;
+}
+
+.produk-header > span {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #3f725b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.produk-header h1 {
+    margin: 0 0 15px;
+    color: #205b45;
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.produk-header p {
+    margin: 0;
+    color: #596760;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.product-search-section {
+    max-width: 1380px;
+    margin: 20px auto 0;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.product-search-section input {
+    width: 100%;
+    height: 58px;
+    padding: 0 22px;
+    border: 1px solid #d7dfd9;
+    border-radius: 15px;
+    outline: none;
+    background: #ffffff;
+    color: #31483d;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+.product-search-section input::placeholder {
+    color: #9aa49e;
+}
+
+.product-search-section input:focus {
+    border-color: #6aa27f;
+    box-shadow: 0 0 0 4px rgba(106, 162, 127, 0.10);
+}
+
+/* =========================================================
+   KATEGORI + JUMLAH
+   ========================================================= */
+
+.result-line {
+    max-width: 1380px;
+    margin: 22px auto 16px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.result-line strong {
+    color: #294d3c;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.result-line span {
+    color: #809087;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* =========================================================
+   GRID PRODUK
+   ========================================================= */
+
+.produk-page .product-grid {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   CARD PRODUK
+   ========================================================= */
+
+.produk-page .product-card {
+    overflow: hidden;
+    border: 1px solid #e0e6e1;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(36, 67, 51, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.produk-page .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(36, 67, 51, 0.10);
+}
+
+/* =========================================================
+   GAMBAR
+   ========================================================= */
+
+.produk-page .product-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: #eef2ed;
+}
+
+.produk-page .product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================================================
+   ISI CARD
+   ========================================================= */
+
+.produk-page .product-card-body {
+    padding: 22px;
+}
+
+.produk-page .product-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 11px;
+    border-radius: 999px;
+    background: #eef6ef;
+    color: #4d7b60;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.produk-page .product-name {
+    margin: 0 0 8px;
+    color: #225c47;
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.produk-page .product-description {
+    min-height: 48px;
+    margin: 0 0 18px;
+    color: #707b75;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   HARGA
+   ========================================================= */
+
+.produk-page .product-price-box {
+    padding: 14px 15px;
+    margin-bottom: 17px;
+    border-radius: 12px;
+    background: #f6f8f5;
+}
+
+.produk-page .product-price-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #7c8780;
+    font-size: 11px;
+}
+
+.produk-page .product-price {
+    display: block;
+    color: #477b5d;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   OPTION
+   ========================================================= */
+
+.produk-page .product-option {
+    margin-bottom: 15px;
+}
+
+.produk-page .product-option > span,
+.produk-page .product-option > label {
+    display: block;
+    margin-bottom: 7px;
+    color: #59665f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.produk-page .product-unit {
+    color: #2d5543;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   JUMLAH
+   ========================================================= */
+
+.produk-page .quantity-control {
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+    overflow: hidden;
+    border: 1px solid #d7dfd9;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.produk-page .quantity-control button {
+    width: 40px;
+    height: 100%;
+    border: 0;
+    background: #f3f6f3;
+    color: #37634c;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.produk-page .quantity-control input {
+    width: 55px;
+    height: 100%;
+    border: 0;
+    outline: none;
+    text-align: center;
+    color: #31493c;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   INSTALASI
+   ========================================================= */
+
+.produk-page .install-select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d7dfd9;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff;
+    color: #405449;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+}
+
+/* =========================================================
+   TANAH RUMPUT
+   ========================================================= */
+
+.produk-page .soil-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.produk-page .soil-qty {
+    width: 100px;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #d7dfd9;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+}
+
+.produk-page .soil-unit {
+    color: #59665f;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   TOMBOL WHATSAPP
+   ========================================================= */
+
+.produk-page .product-wa-btn {
+    width: 100%;
+    min-height: 45px;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 11px;
+    background: #4e8065;
+    color: #ffffff;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.produk-page .product-wa-btn:hover {
+    background: #3f7057;
+}
+
+/* =========================================================
+   SAAT DATABASE KOSONG
+   ========================================================= */
+
+.produk-page .no-result {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 1px dashed #cbd8cf;
+    border-radius: 18px;
+    background: #ffffff;
+    color: #718078;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .produk-page .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .produk-header h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 700px) {
+    .produk-header {
+        padding: 55px 20px 25px;
+    }
+    .produk-header h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+    .produk-header p {
+        font-size: 13px;
+    }
+    .product-search-section {
+        padding: 0 20px;
+    }
+    .result-line {
+        padding: 0 20px;
+    }
+    .produk-page .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    .produk-page .product-image {
+        height: 260px;
+    }
+}
+/* ==================================================
+   DASHBOARD ADMIN - FINAL
+   Khusus halaman admin/index.php
+================================================== */
+
+.dashboard-welcome {
+    width: 100%;
+    margin: 0 0 24px;
+}
+
+.dashboard-welcome h1 {
+    margin: 0 0 6px;
+    color: #214f3b;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.dashboard-welcome p {
+    margin: 0;
+    color: #778279;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==================================================
+   STATISTIK
+================================================== */
+
+.dashboard-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.dashboard-stat {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #e2e9e3;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 7px 24px rgba(33, 79, 59, 0.055);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(33, 79, 59, 0.08);
+}
+
+.dashboard-stat span {
+    display: block;
+    margin-bottom: 9px;
+    color: #778279;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.dashboard-stat strong {
+    display: block;
+    margin: 0;
+    color: #214f3b;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.dashboard-stat small {
+    display: block;
+    margin-top: 9px;
+    color: #96a19a;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ==================================================
+   KONSULTASI TERBARU
+================================================== */
+
+.dashboard-table-card {
+    padding: 26px;
+}
+
+.dashboard-table-header {
+    width: 100%;
+    min-height: 42px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.dashboard-table-header h2 {
+    margin: 0;
+    color: #214f3b;
+    font-size: 23px;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.dashboard-view-all {
+    min-height: 38px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #67967c;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.dashboard-view-all:hover,
+.dashboard-view-all:focus {
+    background: #568369;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dashboard-view-all:active {
+    transform: translateY(1px);
+}
+
+/* ==================================================
+   TABEL DASHBOARD
+================================================== */
+
+.dashboard-table-card .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e3e9e4;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.dashboard-table-card .admin-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+.dashboard-table-card .admin-table thead {
+    background: #f1f5f1;
+}
+
+.dashboard-table-card .admin-table th {
+    padding: 14px 15px;
+    color: #44554b;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid #dfe7e1;
+}
+
+.dashboard-table-card .admin-table td {
+    padding: 14px 15px;
+    color: #5e6a63;
+    font-size: 12px;
+    line-height: 1.55;
+    vertical-align: middle;
+    border-bottom: 1px solid #edf1ee;
+}
+
+.dashboard-table-card .admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard-table-card .admin-table tbody tr:hover {
+    background: #fafcfb;
+}
+
+.dashboard-table-card .admin-table td strong {
+    color: #214f3b;
+    font-weight: 700;
+}
+
+.dashboard-empty {
+    padding: 35px 20px !important;
+    text-align: center !important;
+    color: #7b877f !important;
+}
+
+/* ==================================================
+   STATUS DASHBOARD
+================================================== */
+
+.dashboard-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    min-height: 28px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.dashboard-status.menunggu {
+    background: #fff1cf;
+    color: #a16a00;
+}
+
+.dashboard-status.diproses {
+    background: #e1efff;
+    color: #2868a8;
+}
+
+.dashboard-status.selesai {
+    background: #e2f1e6;
+    color: #3f7659;
+}
+
+.dashboard-status.default {
+    background: #edf1ee;
+    color: #68736d;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-welcome {
+    margin-bottom: 30px;
+}
+
+.dashboard-welcome h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.dashboard-welcome p {
+    margin: 0;
+    color: #777;
+}
+
+/* STATISTIK */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-stat {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-stat span {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.dashboard-stat strong {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.dashboard-stat small {
+    color: #888;
+    font-size: 12px;
+}
+
+/* TABEL DASHBOARD */
+
+.dashboard-table-card {
+    margin-bottom: 30px;
+}
+
+.dashboard-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-table-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.dashboard-view-all {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* STATUS */
+
+.dashboard-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dashboard-status.menunggu {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.dashboard-status.diproses {
+    background: #cfe2ff;
+    color: #084298;
+}
+
+.dashboard-status.selesai {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.dashboard-status.default {
+    background: #e9ecef;
+    color: #555;
+}
+
+/* DATA KOSONG */
+
+.dashboard-empty {
+    text-align: center;
+    padding: 30px !important;
+    color: #888;
+}
+
+/* FOOTER */
+
+.admin-footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
