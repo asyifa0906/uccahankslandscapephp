@@ -1,131 +1,160 @@
 # UCCHANK'S LANDSCAPE
 
-Website **UCCHANK'S LANDSCAPE** merupakan website informasi dan layanan usaha yang menyediakan jasa pembuatan serta renovasi taman dan kolam, serta menyediakan tanaman, bunga, dan rumput.
+Website UCCHANK'S LANDSCAPE merupakan aplikasi web untuk usaha jasa pembuatan taman dan kolam. Website ini membantu pengunjung melihat informasi layanan dan produk serta mengirimkan konsultasi. Halaman admin digunakan untuk mengelola data jasa, produk, dan konsultasi yang masuk.
 
-## Tentang Website
+## Fitur Aplikasi
 
-Website ini dibuat untuk memberikan informasi mengenai layanan dan produk yang tersedia serta memudahkan pengguna dalam melakukan konsultasi dan pemesanan melalui WhatsApp.
+### Halaman Pengunjung
+- **Home** — menampilkan informasi umum mengenai UCCHANK'S LANDSCAPE.
+- **Jasa Kami** — menampilkan layanan yang tersedia dan menyediakan akses ke konsultasi jasa.
+- **Produk Kami** — menampilkan produk dalam kategori Tanaman & Bunga dan Rumput.
+- **Kontak** — menampilkan informasi kontak dan form konsultasi.
+- **Konsultasi** — memungkinkan pengunjung menyampaikan kebutuhan melalui formulir yang tersedia.
 
-## Fitur
-
-- Halaman Home
-- Halaman Jasa Kami
-- Halaman Produk Kami
-- Halaman Kontak
-- Galeri foto
-- Galeri video
-- Pencarian produk
-- Filter kategori produk
-- Pengaturan jumlah produk
-- Pilihan instalasi
-- Perhitungan luas area
-- Konsultasi melalui WhatsApp
-- Pemesanan produk melalui WhatsApp
-- Google Maps untuk lokasi usaha
-- Responsive untuk desktop, tablet, dan mobile
-- Dropdown kategori produk
-
-## Jasa
-
-Website menyediakan beberapa layanan, yaitu:
-
-1. Pembuatan Taman
-2. Renovasi Taman
-3. Pembuatan Kolam
-4. Renovasi Kolam
-
-## Produk
-
-Produk yang tersedia dibagi menjadi dua kategori:
-
-### Tanaman & Bunga
-
-Tersedia 20 jenis tanaman dan bunga, antara lain:
-
-- Bonsai Beringin
-- Tape Buya
-- Ekor Tupai
-- Palem Merah
-- Kamboja
-- Asoka Singapur
-- Karambusa
-- Laudia
-- Sikas
-- Pucuk Merah
-- Bunga Jam 9
-- Jelita Ungu
-- Bromelia
-- Pandang Mas
-- Pandang Bali
-- Sukung India
-- Kacang-Kacangan
-- Bakung Lele
-- Bakung Air Mancur
-- Sambang Darah
-
-### Rumput
-
-Tersedia beberapa jenis rumput:
-
-- Rumput Jepang
-- Rumput Gajah Mini
-- Rumput Swiss
-
-## Implementasi jQuery
-
-Website ini menggunakan **jQuery 3.7.1** untuk menambahkan interaksi pada halaman.
-
-Beberapa implementasi jQuery yang digunakan:
-
-- `$(function(){})` untuk menjalankan kode ketika halaman siap.
-- `.on()` untuk menangani event seperti klik, input, scroll, mouseenter, mouseleave, dan play.
-- `.hide()` dan `.show()` untuk mengatur tampilan elemen.
-- `.fadeIn()` untuk memberikan efek muncul.
-- `.slideDown()` untuk menampilkan bagian konsultasi.
-- `.animate()` untuk animasi dan perpindahan halaman.
-- `.addClass()` dan `.removeClass()` untuk mengatur class.
-- `.text()` untuk mengubah teks.
-- `.val()` untuk mengambil dan mengubah nilai input.
-- `.empty()` dan `.append()` untuk mengatur isi elemen secara dinamis.
-- `$(document).on()` untuk menangani elemen yang dibuat secara dinamis.
+### Halaman Admin
+- **Login** — membatasi akses ke halaman pengelolaan admin.
+- **Dashboard** — menampilkan ringkasan data yang dikelola.
+- **Pengelolaan Jasa** — menambah, melihat, mengubah, dan menghapus data jasa.
+- **Pengelolaan Produk** — mengelola produk kategori Tanaman & Bunga dan Rumput.
+- **Pengelolaan Konsultasi** — melihat konsultasi, memperbarui status, dan menghapus data konsultasi.
+- **Logout** — mengakhiri sesi admin.
 
 ## Teknologi yang Digunakan
 
-- HTML5
-- CSS3
+- PHP
+- MySQL/MariaDB
+- HTML
+- CSS
 - JavaScript
-- jQuery 3.7.1
-- Google Maps
-- WhatsApp
+- XAMPP sebagai lingkungan pengembangan lokal
 
-## Struktur Folder
+## Persyaratan
+
+Sebelum menjalankan aplikasi, pastikan perangkat sudah memiliki:
+
+- XAMPP atau lingkungan server lokal sejenis yang menyediakan Apache, PHP, dan MySQL/MariaDB.
+- Browser web, seperti Google Chrome atau Microsoft Edge.
+- Berkas proyek website dan berkas ekspor database SQL.
+
+## Cara Menjalankan Aplikasi
+
+### 1. Salin proyek ke folder web server
+
+Letakkan folder proyek di direktori `htdocs` XAMPP. Contoh lokasi di Windows:
 
 ```text
-usahatamandankolam/
-│
-├── index.html
-├── jasa.html
-├── produk.html
-├── kontak.html
-├── style.css
+C:\xampp\htdocs\usahatamankolam
+```
+
+Jika nama folder proyek berbeda, sesuaikan alamat pada langkah berikutnya.
+
+### 2. Jalankan XAMPP
+
+1. Buka XAMPP Control Panel.
+2. Klik **Start** pada modul **Apache**.
+3. Klik **Start** pada modul **MySQL**.
+
+Pastikan kedua modul berjalan sebelum membuka website.
+
+### 3. Buat database
+
+1. Buka `http://localhost/phpmyadmin/` di browser.
+2. Buat database dengan nama:
+
+   ```text
+   ucchankslandscape
+   ```
+
+3. Pilih database tersebut.
+4. Buka tab **Import**.
+5. Pilih berkas ekspor database proyek dengan ekstensi `.sql`, kemudian jalankan proses impor.
+
+> **Catatan:** Berkas SQL perlu disertakan dalam repositori atau disediakan terpisah agar database dapat dipulihkan. Jika nama berkas SQL berbeda, gunakan berkas yang sesuai dengan proyek.
+
+### 4. Periksa konfigurasi database
+
+Buka berkas `config/db.php` dan pastikan konfigurasi sesuai dengan pengaturan MySQL lokal. Konfigurasi pengembangan XAMPP yang umum digunakan adalah:
+
+```php
+<?php
+$conn = mysqli_connect("localhost", "root", "", "ucchankslandscape");
+
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
+
+mysqli_set_charset($conn, "utf8mb4");
+?>
+```
+
+Apabila username, password, host, atau nama database di perangkat berbeda, sesuaikan nilainya. Jangan memasukkan kredensial produksi ke repositori publik.
+
+### 5. Buka website
+
+Buka alamat berikut di browser:
+
+- **Halaman pengunjung:** `http://localhost/usahatamankolam/`
+- **Login admin:** `http://localhost/usahatamankolam/admin/login.php`
+
+Jika nama folder proyek berbeda, ganti bagian `usahatamankolam` pada alamat URL sesuai nama folder tersebut.
+
+### 6. Login ke halaman admin
+
+Buka halaman login admin dan masukkan username serta password admin yang sudah terdaftar. Gunakan akun yang dibuat untuk instalasi lokal. Jangan membagikan kredensial admin dalam README atau repositori publik.
+
+## Struktur Folder Utama
+
+```text
+usahatamankolam/
+├── admin/
+│   ├── index.php
+│   ├── jasa/
+│   ├── produk/
+│   │   ├── tanaman-bunga/
+│   │   └── rumput/
+│   ├── konsultasi/
+│   └── css/
+│       └── admin.css
+├── config/
+│   └── db.php
+├── index.php
+├── jasa.php
+├── produk.php
+├── kontak.php
 ├── script.js
-├── README.md
-│
-├── images/
-│   ├── foto1.jpg
-│   ├── foto2.jpg
-│   ├── ...
-│   ├── tanaman1.jpg
-│   ├── ...
-│   ├── tanaman20.jpg
-│   ├── rumput1.jpg
-│   ├── rumput2.jpg
-│   └── rumput3.jpg
-│
-└── videos/
-    ├── hero.mp4
-    ├── video1.mp4
-    ├── video2.mp4
-    ├── video3.mp4
-    ├── video4.mp4
-    └── video5.mp4
+├── konsultasi.js
+└── simpan_konsultasi.php
+```
+
+Struktur di atas merangkum folder dan berkas utama. Berkas lain dapat tersedia sesuai versi proyek.
+
+## Alur Singkat Aplikasi
+
+1. Pengunjung membuka halaman website untuk melihat jasa dan produk.
+2. Pengunjung mengisi dan mengirim form konsultasi.
+3. Aplikasi memproses data konsultasi melalui PHP dan menyimpannya ke database.
+4. Admin login untuk memeriksa serta mengelola data jasa, produk, dan konsultasi.
+5. Admin logout setelah selesai menggunakan halaman pengelolaan.
+
+## Pemecahan Masalah Umum
+
+- **Website tidak dapat dibuka:** pastikan Apache aktif dan folder proyek berada di dalam `htdocs`.
+- **Koneksi database gagal:** pastikan MySQL aktif, database sudah dibuat, dan konfigurasi `config/db.php` benar.
+- **Tabel atau data tidak ditemukan:** pastikan berkas SQL yang sesuai sudah diimpor ke database `ucchankslandscape`.
+- **Login admin gagal:** periksa kembali username dan password akun admin yang terdaftar.
+- **Konsultasi tidak terkirim:** pastikan MySQL aktif, kolom formulir sudah diisi sesuai ketentuan, dan periksa pesan kesalahan yang muncul.
+
+## Keamanan
+
+- Gunakan akun admin yang kuat dan jangan membagikan password.
+- Jangan mengunggah kredensial, password, atau data pelanggan ke repositori publik.
+- Sebelum digunakan di server publik, tinjau kembali pengaturan autentikasi, validasi masukan, hak akses, dan konfigurasi server.
+
+## Pengembang
+
+- **Nama:** Asyifa Nur Cahya Kamila
+- **Kelas:** Teknik Komputer C
+- **Program Studi:** Teknik Komputer
+- **Universitas:** Universitas Negeri Makassar
+
+> Isi README ini perlu disesuaikan jika nama folder, berkas database, atau fitur proyek berubah.
